@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from '../general';
-import forHire from '../../assets/pictures/forHireGif.gif';
-import { useLocation, useNavigate } from 'react-router';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export interface VerticalNavbarProps {}
 
@@ -16,18 +15,19 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
     };
 
     useEffect(() => {
-        if (location.pathname.includes('/projects')) {
+        const path = location.hash ? location.hash.replace('#', '') : location.pathname;
+
+        if (path.includes('/projects')) {
             setProjectsExpanded(true);
         } else {
             setProjectsExpanded(false);
         }
-        if (location.pathname === '/') {
+        if (path === '/' || path === '') {
             setIsHome(true);
         } else {
             setIsHome(false);
         }
-        return () => {};
-    }, [location.pathname]);
+    }, [location.pathname, location.hash]);
 
     return !isHome ? (
         <div style={styles.navbar}>
