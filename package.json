@@ -1,6 +1,7 @@
 {
   "name": "portfolio-website",
   "version": "0.1.0",
+  "description": "A retro 2D operating system portfolio website",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
