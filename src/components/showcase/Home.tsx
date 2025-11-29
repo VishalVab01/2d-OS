@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from '../general';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
+=======
+import { useNavigate } from 'react-router';
+>>>>>>> 0cb96902abb3387f0d539f9fe0427375ea01b2b5
 
 export interface HomeProps {}
 

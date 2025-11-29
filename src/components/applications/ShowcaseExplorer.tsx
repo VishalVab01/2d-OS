@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
+=======
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> 0cb96902abb3387f0d539f9fe0427375ea01b2b5
 import Home from '../showcase/Home';
 import About from '../showcase/About';
 import Window from '../os/Window';
