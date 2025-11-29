@@ -24,47 +24,32 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
             <ResumeDownload />
             <br />
             <div className="text-block">
-                <h2>henryheffernan.com</h2>
+                <h2>NOT Your Average Portfolio</h2>
                 <br />
                 <p>
-                    henryheffernan.com is my portfolio website, and also the
-                    website you are on right now. This project was an absolute
-                    joy to make and challenged me both technically and
-                    creatively. Early in 2022, I knew I wanted to make an
-                    interactive portfolio to aid my job search. I eventually got
-                    the idea for this site around early February and began
-                    development early March. I've been developing it alongside
-                    my last semester at school and if you are reading this, it's
-                    pretty much done!
+                    NOT Your Average Portfolio is an innovative, interactive portfolio experience that pushes the boundaries 
+                    of web development. This isn't just another portfolio site—it's a fully immersive 3D environment combined 
+                    with a retro OS interface that showcases creativity and technical excellence. This project was an absolute 
+                    joy to make and challenged me both technically and creatively, demonstrating my ability to blend modern 
+                    web technologies with unique design concepts.
                 </p>
                 <br />
                 <div className="captioned-image">
                     <VideoAsset src={computer} />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 1:</b> Blender Scene of the 3D website.
-                            The scene from Blender was baked and exported in a
-                            GLTF format.
+                            <b>Figure 1:</b> 3D immersive portfolio scene created in Blender.
+                            The scene was meticulously baked and exported in GLTF format for optimal web performance.
                         </sub>
                     </p>
                 </div>
                 <p>
-                    Now, a quick technical breakdown of the site. The website is
-                    split into two parts, the 3D site, and the 2D OS site. The
-                    3D site uses Three.js to render the scene and renders the 2D
-                    site inside of it using an iframe. The 2D OS site is a
-                    simple react site that is hosted{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://henryheffernan.vercel.app/"
-                    >
-                        here
-                    </a>{' '}
-                    and works as a standalone web app. The actual rendering of
-                    the 2D site is accomplished using a CSS renderer provided by
-                    Three.js that transforms the html of the 2D site with 3D CSS
-                    transforms to give the illusion of three dimensionality.
+                    The technical architecture is sophisticated yet elegant. The portfolio features a dual-interface system: 
+                    a stunning 3D environment powered by Three.js that seamlessly integrates a retro-inspired 2D OS interface. 
+                    The 3D scene renders the OS interface inside it using an iframe, creating a unique nested experience. 
+                    The OS interface is a fully functional React application that works both as a standalone site and as part 
+                    of the 3D experience. The magic happens through Three.js's CSS renderer, which applies 3D CSS transforms 
+                    to the HTML elements, creating authentic three-dimensional depth and perspective.
                 </p>
                 <br />
                 <h3>Links:</h3>
@@ -115,17 +100,10 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                     </li>
                 </ul>
                 <p>
-                    I'm skipping over a lot of details in exchange for brevity,
-                    but I do plan on doing a more in depth breakdown for those
-                    interested sometime in the future. To get updates with that
-                    project feel free to follow me on twitter{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://twitter.com/henryheffernan"
-                    >
-                        @henryheffernan
-                    </a>
+                    This project showcases advanced front-end engineering, 3D graphics programming, and creative problem-solving. 
+                    It demonstrates proficiency in modern web technologies while delivering an unforgettable user experience 
+                    that stands out in today's competitive landscape. The combination of technical sophistication and creative 
+                    design makes this portfolio truly one-of-a-kind.
                 </p>
             </div>
             <div className="text-block">
@@ -153,12 +131,38 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                     provide a seamless and engaging experience that reflects the quality and innovation associated with the 
                     Nothing brand.
                 </p>
+                <br />
+                <h3>Links:</h3>
+                <ul>
+                    <li>
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://nothing-reimagined.vercel.app/"
+                        >
+                            <p>
+                                <b>[Live Demo]</b> - nothing-reimagined.vercel.app
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://github.com/yourusername/nothing-reimagined"
+                        >
+                            <p>
+                                <b>[GitHub]</b> - Nothing Reimagined Repository
+                            </p>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <div className="text-block">
-                <h2>Nimbus Keyboard</h2>
+                <h2>SwitchLab</h2>
                 <br />
                 <p>
-                    Nimbus Keyboard is not your average keyboard website—it's a full-stack, 3D immersive experience that 
+                    SwitchLab is not your average keyboard website—it's a full-stack, 3D immersive experience that 
                     pushes the boundaries of web development. Built with Next.js, Tailwind CSS, React Three Fiber for 
                     stunning 3D graphics, GSAP for smooth animations, and Node.js for the backend, this project showcases 
                     a complete end-to-end solution deployed on Vercel.
@@ -168,7 +172,7 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                     <VideoAsset src={nimbus} />
                     <p style={styles.caption}>
                         <sub>
-                            <b>Figure 3:</b> Nimbus Keyboard 3D immersive website with interactive keyboard models.
+                            <b>Figure 3:</b> SwitchLab 3D immersive website with interactive keyboard models.
                         </sub>
                     </p>
                 </div>
@@ -177,6 +181,32 @@ const SoftwareProjects: React.FC<SoftwareProjectsProps> = (props) => {
                     in real-time. This project demonstrates my proficiency in modern web technologies, 3D graphics programming, 
                     and creating production-ready applications that deliver exceptional user experiences.
                 </p>
+                <br />
+                <h3>Links:</h3>
+                <ul>
+                    <li>
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://switchlab.vercel.app/"
+                        >
+                            <p>
+                                <b>[Live Demo]</b> - switchlab.vercel.app
+                            </p>
+                        </a>
+                    </li>
+                    <li>
+                        <a
+                            rel="noreferrer"
+                            target="_blank"
+                            href="https://github.com/yourusername/switchlab"
+                        >
+                            <p>
+                                <b>[GitHub]</b> - SwitchLab Repository
+                            </p>
+                        </a>
+                    </li>
+                </ul>
             </div>
             <ResumeDownload />
         </div>

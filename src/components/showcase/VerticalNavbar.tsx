@@ -32,8 +32,8 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
     return !isHome ? (
         <div style={styles.navbar}>
             <div style={styles.header}>
-                <h1 style={styles.headerText}>Vishal</h1>
-                <h1 style={styles.headerText}>Vaibhav</h1>
+                <h1 style={styles.headerText}>Vishal's</h1>
+                <h1 style={styles.headerText}>Portfolio</h1>
                 <h3 style={styles.headerShowcase}>Showcase '25</h3>
             </div>
             <div style={styles.links}>
@@ -65,12 +65,12 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
                             <Link
                                 containerStyle={styles.insetLink}
                                 to="projects/music"
-                                text="MUSIC"
+                                text="AI ML"
                             />
                             <Link
                                 containerStyle={styles.insetLink}
                                 to="projects/art"
-                                text="ART"
+                                text="DEVOPS"
                             />
                         </div>
                     )

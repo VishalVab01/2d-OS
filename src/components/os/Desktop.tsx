@@ -260,7 +260,10 @@ const styles: StyleSheetCSS = {
     desktop: {
         minHeight: '100%',
         flex: 1,
-        backgroundColor: Colors.turquoise,
+        backgroundImage: 'url(https://customer-assets.emergentagent.com/job_dev-content-swap/artifacts/in49rmcv_Gemini_Generated_Image_35e7b635e7b635e7.png)',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
     },
     shutdown: {
         minHeight: '100%',

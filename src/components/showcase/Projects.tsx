@@ -88,15 +88,15 @@ const Projects: React.FC<ProjectsProps> = (props) => {
                 <ProjectBox
                     icon={music}
                     iconStyle={styles.musicIcon}
-                    title="Music"
-                    subtitle="VENTURES"
+                    title="AI ML"
+                    subtitle="PROJECTS"
                     route="music"
                 />
                 <ProjectBox
                     icon={art}
                     iconStyle={styles.artIcon}
-                    title="Art"
-                    subtitle="ENDEAVORS"
+                    title="DevOps"
+                    subtitle="PROJECTS"
                     route="art"
                 />
             </div>
