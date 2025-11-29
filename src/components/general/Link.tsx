@@ -19,33 +19,30 @@ const Link: React.FC<LinkProps> = (props) => {
 
     // if current path is the same as the link path
     useEffect(() => {
-        if (location.pathname === `/${props.to}`) {
+        const path = location.hash ? location.hash.replace('#', '') : location.pathname;
+        if (path === `/${props.to}`) {
             setIsHere(true);
         } else {
             setIsHere(false);
         }
-        return () => {};
     }, [location, props.to]);
 
     const [active, setActive] = useState(false);
 
     const handleClick = (e: any) => {
-        let isMounted = true;
         e.preventDefault();
         setActive(true);
-        if (location.pathname !== `/${props.to}`) {
+        const targetPath = `/${props.to}`;
+        const currentPath = location.hash ? location.hash.replace('#', '') : location.pathname;
+
+        if (currentPath !== targetPath) {
             setTimeout(() => {
-                if (isMounted) navigate(`/${props.to}`);
+                navigate(targetPath);
             }, 100);
         }
-        let t = setTimeout(() => {
-            if (isMounted) setActive(false);
+        setTimeout(() => {
+            setActive(false);
         }, 100);
-
-        return () => {
-            isMounted = false;
-            clearTimeout(t);
-        };
     };
 
     return (
