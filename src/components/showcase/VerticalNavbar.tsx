@@ -32,7 +32,7 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
     return !isHome ? (
         <div style={styles.navbar}>
             <div style={styles.header}>
-                <h1 style={styles.headerText}>Vishal's</h1>
+                <h1 style={styles.headerText}>Vishal Vaibhav's</h1>
                 <h1 style={styles.headerText}>Portfolio</h1>
                 <h3 style={styles.headerShowcase}>Showcase '25</h3>
             </div>
