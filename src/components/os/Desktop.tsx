@@ -10,7 +10,7 @@ import Toolbar from './Toolbar';
 import DesktopShortcut, { DesktopShortcutProps } from './DesktopShortcut';
 import Scrabble from '../applications/Scrabble';
 import { IconName } from '../../assets/icons';
-import Credits from '../applications/Credits';
+import Resume from '../../assets/resume/intern_resume_sept.pdf';
 
 export interface DesktopProps {}
 
@@ -64,7 +64,7 @@ const APPLICATIONS: {
         key: 'credits',
         name: 'Resume',
         shortcutIcon: 'credits',
-        component: Credits,
+        component: () => null,
     },
 };
 
@@ -91,6 +91,11 @@ const Desktop: React.FC<DesktopProps> = (props) => {
                 shortcutName: app.name,
                 icon: app.shortcutIcon,
                 onOpen: () => {
+                    if (app.name === 'Resume') {
+                        window.open(Resume, '_blank', 'noopener,noreferrer');
+                        return;
+                    }
+
                     addWindow(
                         app.key,
                         <app.component
