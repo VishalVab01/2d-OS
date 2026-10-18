@@ -1,5 +1,4 @@
 import React from 'react';
-import me from '../../assets/pictures/workingAtComputer.jpg';
 import meNow from '../../assets/pictures/currentme.jpg';
 import childhoodPhoto from '../../assets/pictures/childhood-computer.jpeg';
 import { Link } from 'react-router-dom';
@@ -11,7 +10,6 @@ const About: React.FC<AboutProps> = (props) => {
     return (
         // add on resize listener
         <div className="site-page-content">
-            {/* <img src={me} style={styles.topImage} alt="" /> */}
             <h1 style={{ marginLeft: -16 }}>Welcome</h1>
             <h3>I'm Vishal Vaibhav</h3>
             <br />
@@ -46,14 +44,22 @@ const About: React.FC<AboutProps> = (props) => {
                 </p>
                 <br />
                 <div className="captioned-image">
-                    <img
-                        src={childhoodPhoto}
-                        style={styles.childhoodImage}
-                        alt="Vishal using a laptop as a child"
-                    />
+                    <div style={styles.childhoodImageFrame}>
+                        <img
+                            src={childhoodPhoto}
+                            style={styles.childhoodImageBackdrop}
+                            alt=""
+                            aria-hidden="true"
+                        />
+                        <img
+                            src={childhoodPhoto}
+                            style={styles.childhoodImage}
+                            alt="Vishal using a laptop as a child"
+                        />
+                    </div>
                     <p>
                         <sub>
-                            <b>Childhood photo:</b> exploring computers from an early age
+                            <b>Figure 1:</b> A photo of me developing this website
                         </sub>
                     </p>
                 </div>
@@ -66,15 +72,6 @@ const About: React.FC<AboutProps> = (props) => {
                     them on my{' '}
                     <Link to="/projects/software">Software Projects</Link> page.
                 </p>
-                <br />
-                <div className="captioned-image">
-                    <img src={me} style={styles.image} alt="" />
-                    <p>
-                        <sub>
-                            <b>Figure 2:</b> A photo of me developing this website
-                        </sub>
-                    </p>
-                </div>
                 <br />
                 <p>
                     Building user interfaces led me to explore the systems behind
@@ -116,7 +113,7 @@ const About: React.FC<AboutProps> = (props) => {
                         <img src={meNow} style={styles.reducedImage} alt="" />
                         <p>
                             <sub>
-                                <b>Figure 3:</b> Me, April 2022
+                                <b>Figure 2:</b> Me, April 2022
                             </sub>
                         </p>
                     </div>
@@ -149,25 +146,40 @@ const styles: StyleSheetCSS = {
         marginBottom: 16,
         fontSize: 48,
     },
-    image: {
-        height: 'auto',
-        width: '100%',
-    },
-    childhoodImage: {
-        height: 'auto',
+    childhoodImageFrame: {
+        position: 'relative',
         width: '100%',
         maxWidth: 360,
+        aspectRatio: '16 / 9',
+        overflow: 'hidden',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'flex-start',
+        backgroundColor: '#111',
+    },
+    childhoodImageBackdrop: {
+        position: 'absolute',
+        inset: 0,
+        width: '100%',
+        height: '100%',
+        objectFit: 'cover',
+        objectPosition: 'center 35%',
+        filter: 'blur(14px) brightness(0.6)',
+        transform: 'scale(1.08)',
+    },
+    childhoodImage: {
+        position: 'relative',
+        zIndex: 1,
+        height: '110%',
+        width: 'auto',
+        objectFit: 'contain',
+        objectPosition: 'center top',
     },
     reducedImage: {
         height: 'auto',
         width: '107%',
         maxHeight: '430px',
         objectFit: 'cover',
-    },
-    topImage: {
-        height: 'auto',
-        width: '100%',
-        marginBottom: 32,
     },
     verticalImage: {
         alignSelf: 'center',
