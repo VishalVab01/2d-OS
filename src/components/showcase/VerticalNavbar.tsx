@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from '../general';
 import { useLocation, useNavigate } from 'react-router-dom';
+import softwareIcon from '../../assets/pictures/projects/software.gif';
+import aiEngineeringIcon from '../../assets/pictures/projects/art.gif';
 
 export interface VerticalNavbarProps {}
 
@@ -34,7 +36,7 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
             <div style={styles.header}>
                 <h1 style={styles.headerText}>Vishal's</h1>
                 <h1 style={styles.headerText}>Portfolio</h1>
-                <h3 style={styles.headerShowcase}>Showcase '25</h3>
+                <h3 style={styles.headerShowcase}>Showcase '26</h3>
             </div>
             <div style={styles.links}>
                 <Link containerStyle={styles.link} to="" text="HOME" />
@@ -60,17 +62,14 @@ const VerticalNavbar: React.FC<VerticalNavbarProps> = (props) => {
                             <Link
                                 containerStyle={styles.insetLink}
                                 to="projects/software"
-                                text="Web"
+                                text="Software"
+                                icon={softwareIcon}
                             />
                             <Link
                                 containerStyle={styles.insetLink}
                                 to="projects/music"
-                                text="AI ML"
-                            />
-                            <Link
-                                containerStyle={styles.insetLink}
-                                to="projects/art"
-                                text="DEVOPS"
+                                text="AI Engineering"
+                                icon={aiEngineeringIcon}
                             />
                         </div>
                     )

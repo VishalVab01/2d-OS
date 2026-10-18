@@ -2,6 +2,7 @@ import React from 'react';
 import buildForGoodFinale from '../../assets/pictures/achievements/build-for-good-finale.jpeg';
 import buildForGoodAwards from '../../assets/pictures/achievements/build-for-good-awards.jpeg';
 import angaWebsite from '../../assets/pictures/achievements/anga-website.png';
+import leetcodeProfile from '../../assets/pictures/achievements/leetcode-profile.png';
 
 export interface AchievementsProps {}
 
@@ -79,6 +80,27 @@ const Achievements: React.FC<AchievementsProps> = () => {
                 <p>
                     <sub>
                         <b>Recognition</b> — MacBook M1 Pro and event goodies
+                    </sub>
+                </p>
+            </div>
+            <div className="text-block">
+                <h2>LeetCode — 274 Problems Solved</h2>
+                <p>
+                    Built consistency in algorithmic problem solving by completing
+                    274 LeetCode problems: 95 Easy, 140 Medium, and 39 Hard. The
+                    profile also shows 465 submissions over the past year, activity
+                    on 195 days, a 36-day maximum streak, and the 100 Days Badge
+                    for 2026.
+                </p>
+            </div>
+            <div className="captioned-image">
+                <img
+                    src={leetcodeProfile}
+                    alt="LeetCode profile showing 274 problems solved, submission activity, and the 100 Days Badge 2026"
+                />
+                <p>
+                    <sub>
+                        <b>LeetCode profile</b> — problem-solving progress and 2026 badge
                     </sub>
                 </p>
             </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import me from '../../assets/pictures/workingAtComputer.jpg';
 import meNow from '../../assets/pictures/currentme.jpg';
+import childhoodPhoto from '../../assets/pictures/childhood-computer.jpeg';
 import { Link } from 'react-router-dom';
 import ResumeDownload from './ResumeDownload';
 
@@ -16,15 +17,15 @@ const About: React.FC<AboutProps> = (props) => {
             <br />
             <div className="text-block">
                 <p>
-                    I'm a web developer currently studying at GL Bajaj Institute of Management where
-                     I’m pursuing my BCA degree, expected to graduate in 2027.
+                    I&apos;m a software developer at WEB3TASK, building AI-enabled
+                    products and scalable backend services. I focus on creating
+                    reliable systems that perform well as they grow.
                 </p>
                 <br />
                 <p>
-                    Thank you for taking the time to check out my portfolio. I
-                    really hope you enjoy exploring it as much as I enjoyed
-                    building it. If you have any questions or comments, feel
-                    free to contact me using{' '}
+                    Thanks for checking out my portfolio. I hope you enjoy
+                    exploring it as much as I enjoyed building it. If you have
+                    questions or comments, contact me using{' '}
                     <Link to="/contact">this form</Link> or shoot me an email at{' '}
                     <a href="mailto:whysoovishal@gmail.com">
                         whysoovishal@gmail.com
@@ -36,35 +37,58 @@ const About: React.FC<AboutProps> = (props) => {
                 <h3>About Me</h3>
                 <br />
                 <p>
-                    From a young age, I have always been fascinated by computers and technology. I was naturally curious about how things worked, and my love for gaming only strengthened that curiosity. Spending hours exploring games and gadgets slowly shaped my passion for understanding the tech behind them.
+                    From a young age, I was fascinated by computers and technology.
+                    My curiosity about how things worked, along with my love of
+                    gaming, pushed me to explore the technology behind the games
+                    and gadgets I used. My first exposure to programming came in
+                    middle school, when I was introduced to Java; that early spark
+                    grew into a lasting interest in coding and problem-solving.
+                </p>
+                <br />
+                <div className="captioned-image">
+                    <img
+                        src={childhoodPhoto}
+                        style={styles.childhoodImage}
+                        alt="Vishal using a laptop as a child"
+                    />
+                    <p>
+                        <sub>
+                            <b>Childhood photo:</b> exploring computers from an early age
+                        </sub>
+                    </p>
+                </div>
 
-My first real exposure to programming came in middle school, where I was introduced to Java. That early spark grew into a long-lasting interest in coding and problem-solving.
+                <p>
+                    I started programming seriously in my first year of college,
+                    beginning with web scraping and interactive websites. I went
+                    on to build passion projects such as chatbots, small games,
+                    landing pages, and meme search engines. You can find many of
+                    them on my{' '}
+                    <Link to="/projects/software">Software Projects</Link> page.
                 </p>
                 <br />
                 <div className="captioned-image">
                     <img src={me} style={styles.image} alt="" />
                     <p>
                         <sub>
-                            <b>Figure 1:</b> A real photo of me developing this
-                            website :)
+                            <b>Figure 2:</b> A photo of me developing this website
                         </sub>
                     </p>
                 </div>
-
+                <br />
                 <p>
-                   I started programming more seriously in my first year of college, initially learning how to scrape and interact with websites. I went on to build a ton of passion-driven frontend projects, including chatbots, small games, landing pages, 
-                   meme search engines, and more. You can find many of these on my {' '}
-                    
-                   {' '}
-                    <Link to="/projects/software">Software Projects</Link> page.
+                    Building user interfaces led me to explore the systems behind
+                    them. I expanded into backend engineering with Node.js and
+                    Kotlin, REST APIs, databases, and AWS, and worked with
+                    technologies such as Next.js, GSAP, Framer Motion, Three.js,
+                    and WebGL. Today, I focus on AI-enabled products and on making
+                    software reliable and scalable as it grows.
                 </p>
                 <br />
                 <p>
-                    As I continued learning, I realized I was initially focused on basic frontend development. But everything changed when I discovered Next.js and advanced frontend technologies like GSAP, Framer Motion, Three.js, and WebGL. That opened up a whole new world for me.
-
-Curiosity eventually pulled me into the backend as well. I started exploring Node.js, and soon I knew I wanted to become a full-stack developer. Since then, I’ve been studying databases, AWS, DevOps practices, and everything that helps me build complete, scalable applications.
-
-Alongside web development, I also have a strong interest in problem-solving, so I actively practice competitive programming and work on improving my DSA skills.
+                    I enjoy solving technical problems and keep sharpening my data
+                    structures and algorithms skills through regular LeetCode
+                    practice.
                 </p>
                 <br />
                 <br />
@@ -80,7 +104,8 @@ Alongside web development, I also have a strong interest in problem-solving, so 
                         <h3>My Hobbies</h3>
                         <br />
                         <p>
-                            Beyond software, I have a lot of hobbies that I enjoy in my free time. The more tangible hobbies I have are cinematography and playing cricket. You can read more about each of these on their respective pages under my projects tab. Some other hobbies I enjoy are cooking and (unsurprisingly) playing video games.
+                            Beyond software, I enjoy cinematography, playing
+                            cricket, cooking, and (unsurprisingly) video games.
                         </p>
                         <br />
                         <p>
@@ -91,7 +116,7 @@ Alongside web development, I also have a strong interest in problem-solving, so 
                         <img src={meNow} style={styles.reducedImage} alt="" />
                         <p>
                             <sub>
-                                <b>Figure 2:</b> Me, April 2022
+                                <b>Figure 3:</b> Me, April 2022
                             </sub>
                         </p>
                     </div>
@@ -101,16 +126,8 @@ Alongside web development, I also have a strong interest in problem-solving, so 
                 <p>
                     Thanks for reading about me! I hope that you enjoy exploring
                     the rest of my portfolio website and everything it has to
-                    offer. If you find the easter egg make sure to let me know
-                    on twitter{' '}
-                    <a
-                        rel="noreferrer"
-                        target="_blank"
-                        href="https://x.com/vishaldotexe"
-                    >
-                        @vishaldotexe
-                    </a>{' '}
-                    Good luck and have fun!
+                    offer. If you find the easter egg, let me know through the
+                    contact page. Good luck and have fun!
                 </p>
                 <br />
                 <p>
@@ -135,6 +152,11 @@ const styles: StyleSheetCSS = {
     image: {
         height: 'auto',
         width: '100%',
+    },
+    childhoodImage: {
+        height: 'auto',
+        width: '100%',
+        maxWidth: 360,
     },
     reducedImage: {
         height: 'auto',

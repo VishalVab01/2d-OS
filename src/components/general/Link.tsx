@@ -8,6 +8,7 @@ export interface LinkProps {
     to: string;
     containerStyle?: React.CSSProperties;
     outsideTo?: string;
+    icon?: string;
 }
 
 const Link: React.FC<LinkProps> = (props) => {
@@ -49,9 +50,17 @@ const Link: React.FC<LinkProps> = (props) => {
         <RouterLink
             to={`/${props.to}`}
             onMouseDown={handleClick}
-            style={Object.assign({}, { display: 'flex' }, props.containerStyle)}
+            style={Object.assign(
+                {},
+                { display: 'flex' },
+                props.icon && { alignItems: 'center' },
+                props.containerStyle
+            )}
         >
             {isHere && <div style={styles.hereIndicator} />}
+            {props.icon && (
+                <img src={props.icon} alt="" aria-hidden="true" style={styles.icon} />
+            )}
             <h4
                 className="router-link"
                 style={Object.assign(
@@ -82,6 +91,13 @@ const styles: StyleSheetCSS = {
         borderRadius: '50%',
         marginRight: 6,
         textDecoration: 'none',
+    },
+    icon: {
+        width: 24,
+        height: 24,
+        objectFit: 'contain',
+        marginRight: 8,
+        flexShrink: 0,
     },
 };
 
